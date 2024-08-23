@@ -117,8 +117,8 @@ programaLogico(Programa):-
     todosDistintos(Programa).
 
 enElMismoParque(Programa).
-    parque(_,Atracciones),
-    forall(member(Atraccion,Programa),member(Atraccion,Atracciones)).
+    tieneAtraccion(Parque,_),
+    forall(member(Atraccion,Programa),tieneAtraccion(Parque,Atraccion)).
 
 todosDistintos([]).
 todosDistintos([Cabeza|Cola]) :- 
